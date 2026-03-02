@@ -1,45 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================
+   GENERAL STYLING
+========================= */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Popaah Nursery School</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fef6e4;
+    text-align: center;
+}
 
-<body>
+header {
+    background-color: #ff7f50;
+    padding: 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-<header>
-    <h1>Contact Us</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+nav {
+    margin-top: 10px;
+}
 
-<div class="floating-shape" style="top:150px; left:30px;"></div>
-<div class="floating-shape" style="top:300px; left:220px;"></div>
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
 
-<section class="content">
-    <h2>Get In Touch 📩</h2>
-    <p>We’d love to hear from you! Fill out the form below and we’ll respond as soon as possible.</p>
+nav a:hover {
+    text-decoration: underline;
+}
 
-    <form>
-        <input type="text" placeholder="Parent Name" required><br><br>
-        <input type="email" placeholder="Email" required><br><br>
-        <textarea placeholder="Message" rows="4" required></textarea><br><br>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+/* =========================
+   HERO SECTION
+========================= */
 
-<footer>
-    <p>© 2026 Popaah Nursery School | All Rights Reserved</p>
-</footer>
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.hero h2 {
+    font-size: 40px;
+    animation: slideDown 1s ease;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    padding: 40px;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    padding: 40px;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   FLOATING SHAPES
+========================= */
+
+.floating-shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 127, 80, 0.5);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(15px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
