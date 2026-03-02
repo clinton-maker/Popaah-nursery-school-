@@ -12,41 +12,61 @@
 <body>
 
 <header>
-    <h1>🌈 Popaah Nursery School</h1>
+    <h1>🌟 Popaah Nursery School</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="contact.html">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Why Us</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <!-- Floating Shapes -->
-<div class="floating-shape" style="top:100px; left:20px;"></div>
-<div class="floating-shape" style="top:200px; left:300px;"></div>
+<div class="floating-shape" style="top:80px; left:50px;"></div>
+<div class="floating-shape" style="top:250px; left:200px;"></div>
 <div class="floating-shape" style="top:400px; left:100px;"></div>
 
-<section class="hero">
-    <h2>Learning Through Play</h2>
-    <p>Where little minds grow big dreams 🌈</p>
+<section class="hero" id="hero">
+    <h2>Learning, Playing, Growing!</h2>
+    <p>Where little minds explore, create, and shine 🌈</p>
     <button onclick="showMessage()">Enroll Now</button>
 </section>
 
+<section class="about" id="about">
+    <h2>About Popaah Nursery</h2>
+    <p>
+        Popaah Nursery School nurtures young minds in a safe, loving, and stimulating environment. We focus on creativity, early learning, and building confidence in every child.
+    </p>
+</section>
+
 <section class="features" id="features">
+    <h2>Why Choose Us?</h2>
     <div class="card">
         <h3>🎨 Creative Arts</h3>
-        <p>Drawing, painting and fun activities.</p>
+        <p>Hands-on activities like painting, music, and crafting every day.</p>
     </div>
-
+    <div class="card">
+        <h3>🛡 Safe Environment</h3>
+        <p>Secure classrooms and playgrounds ensuring safety and comfort.</p>
+    </div>
     <div class="card">
         <h3>📚 Early Learning</h3>
-        <p>Basic reading, writing and counting skills.</p>
+        <p>Reading, numbers, and interactive lessons for early development.</p>
     </div>
+</section>
 
-    <div class="card">
-        <h3>⚽ Outdoor Play</h3>
-        <p>Safe playground and physical activities.</p>
-    </div>
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Location: Dar es Salaam, Tanzania</p>
+    <p>Phone: +255 700 000 001</p>
+    <p>Email: hello@popaahnursery.ac.tz</p>
+
+    <form>
+        <input type="text" placeholder="Parent Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <textarea placeholder="Message" rows="4" required></textarea><br><br>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <footer>
